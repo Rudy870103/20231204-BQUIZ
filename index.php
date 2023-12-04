@@ -31,16 +31,17 @@
         		</div>
 				<!-- 中間內容區 -->
 				<?php
-				switch($_GET['do']){
+				
+				$do=$_GET['do']??'main';
+				switch($do){
 					case "login":
 						include "./front/login.php"; 
-					break;
-					case "main":
-						include "./front/main.php"; 
 					break;
 					case "news":
 						include "./front/news.php"; 
 					break;
+					default:
+						include "./front/main.php";
 				}
 				?>
 
