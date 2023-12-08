@@ -11,6 +11,7 @@ if(isset($_FILES['img']['tmp_name'])){
 
 unset($_POST['table']);
 $DB->save($_POST);
+$_POST['sh']=($table=='title')?0:1;
 
 to("../back.php?do=$table");
 
