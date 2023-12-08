@@ -151,8 +151,7 @@ function to($url){
     header("location:$url");
 }
 
-$Que=new DB('que');
 
-
-
+$Title=new DB('titles');
+$Total=new DB('total');
 ?>
