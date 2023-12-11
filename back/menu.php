@@ -1,12 +1,15 @@
 <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-    <p class="t cent botli">管理者帳號管理</p>
+    <p class="t cent botli">選單管理</p>
     <form method="post" action="./api/edit.php">
         <table width="100%" style="text-align: center">
             <tbody>
                 <tr class="yel">
-                    <td width="45%">帳號</td>
-                    <td width="45%">密碼</td>
+                    <td width="30%">主選單名稱</td>
+                    <td width="30%">選單連結網址</td>
+                    <td width="10%">次選單數</td>
+                    <td width="10%">顯示</td>
                     <td width="10%">刪除</td>
+                    <td></td>
                 </tr>
                 <?php
 
@@ -15,13 +18,17 @@
                 ?>
                 <tr>
                     <td>
-                        <input type="text" name="acc[]" style="width:90%" value="<?=$row['acc'];?>">
+                        <input type="text" name="text[]" value="<?=$row['text'];?>">
                     </td>
                     <td>
-                        <input type="password" name="pw[]" value="<?=$row['pw'];?>">
+                        <input type="text" name="href[]" value="<?=$row['href'];?>">
+                    </td>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" name="sh[]" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':'';?>>
                     </td>
                     <td>
-                    <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
+                        <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
                     </td>
                 </tr>
                 <input type="hidden" name="id[]" value="<?=$row['id'];?>">
@@ -34,7 +41,7 @@
             <tbody>
                 <tr>
                     <input type="hidden" name="table" value="<?=$do;?>">
-                    <td width="200px"><input type="button" onclick="op('#cover','#cvr','./modal/<?=$do;?>.php?table=<?=$do;?>')" value="新增管理者帳號"></td>
+                    <td width="200px"><input type="button" onclick="op('#cover','#cvr','./modal/<?=$do;?>.php?table=<?=$do;?>')" value="新增主選單"></td>
                     <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
                 </tr>
             </tbody>
