@@ -8,7 +8,7 @@
         <td>密碼:</td>
         <td><input type="password" name="pw" id=""></td>
         <td>確認密碼:</td>
-        <td><input type="password" name="confirm" id=""></td>
+        <td><input type="password" name="pw2" id=""></td>
     </tr>
 </table>
 <div>
