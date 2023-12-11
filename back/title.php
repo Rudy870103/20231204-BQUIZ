@@ -20,10 +20,10 @@
                     </td>
                     <td width="23%">
                         <input type="text" name="text[<?=$row['id'];?>]" style="width:90%" value="<?=$row['text'];?>">
-
+                        
                     </td>
                     <td width="7%">
-                    <input type="radio" name="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':'';?>>
+                        <input type="radio" name="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':'';?>>
                     </td>
                     <td width="7%">
                     <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
@@ -35,20 +35,13 @@
                 <?php
                 }
                 ?>
-                <tr class="yel">
-                    <td width="45%"></td>
-                    <td width="23%"></td>
-                    <td width="7%"></td>
-                    <td width="7%"></td>
-                    <td></td>
-                </tr>
             </tbody>
         </table>
         <table style="margin-top:40px; width:70%;">
             <tbody>
                 <tr>
-                    <input type="hidden" name="table" value="<?= $do; ?>">
-                    <td width="200px"><input type="button" onclick="op('#cover','#cvr','./modal/<?= $do; ?>.php?table=<?= $do; ?>')" value="新增網站標題圖片"></td>
+                    <input type="hidden" name="table" value="<?=$do;?>">
+                    <td width="200px"><input type="button" onclick="op('#cover','#cvr','./modal/<?=$do;?>.php?table=<?=$do;?>')" value="新增網站標題圖片"></td>
                     <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
                 </tr>
             </tbody>
