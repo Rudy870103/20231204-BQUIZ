@@ -1,7 +1,7 @@
 <h3>新增次選單</h3>
 <hr>
 <form action="./api/submenu.php" method="post" enctype="multipart/form-data">
-<table>
+<table class="cent">
     <tr>
         <td>次選單名稱:</td>
         <td>次選單連結網址:</td>
