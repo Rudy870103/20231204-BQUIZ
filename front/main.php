@@ -60,9 +60,9 @@
 		<script>
 			$(".ssaa li").hover(
 				function() {
-					$("#altt").html("<pre>" + $(this).children(".all").html() + "</pre>")
-					$("#altt").show()
-				}
+					$("#altt").html("<pre>" +$(this).children(".all").html()  + "</pre>")
+                    $("#altt").show()
+                }
 			)
 			$(".ssaa li").mouseout(
 				function() {
