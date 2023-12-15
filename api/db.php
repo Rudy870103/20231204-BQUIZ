@@ -167,7 +167,7 @@ $tables=array_keys(get_defined_vars());
 
 
 if(isset($_GET['do'])){
-    $key=$ucfirst($_GET['do']);
+    $key=ucfirst($_GET['do']);
     if(in_array($key,$tables)){
         $DB=$$key;
     }
