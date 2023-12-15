@@ -3,7 +3,7 @@
 <form action="./api/add.php" method="post" enctype="multipart/form-data">
 <table>
     <tr>
-        <td>動畫圖片</td>
+        <td>動畫圖片:</td>
         <td><input type="file" name="img" id=""></td>
     </tr>
 </table>
