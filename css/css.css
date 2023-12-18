@@ -70,31 +70,42 @@ body
 {
 	position:relative;
 	border-radius:10px;
-	background:url(../materials/menu.fw.png) center no-repeat;
+	background:url(../icon/menu.fw.png) center no-repeat;
 	background-size:cover;
 	line-height:30px;
 	padding:2px 10px 2px 10px;
 	margin:7px 1px 7px 1px;
+	height:32px; /*調整主選單高度*/
+
 }
 .mainmu:hover
 {
-	background:url(../materials/menu2.fw.png) center no-repeat;
+	background:url(../icon/menu2.fw.png) center no-repeat;
 	background-size:cover;
+	z-index:8; /*hover 時變更主選單層級及優先權*/
 }
 .mainmu2
 {
 	position:relative;
 	border-radius:10px;
-	background:url(../materials/menu3.fw.png)center no-repeat;
+	background:url(../icon/menu3.fw.png)center no-repeat;
 	background-size:100% 100%;
 	line-height:30px;
 	padding:2px 10px 2px 10px;
 	margin:7px 1px 7px 1px;
+	z-index:9; /* 讓次選單在主選單上方*/
 }
 .mainmu2:hover
 {
-	background:url(../materials/menu4.fw.png) center no-repeat;
+	background:url(../icon/menu4.fw.png) center no-repeat;
 	background-size:cover;
+}
+.mw{
+	position: relative;
+	left:100px; 
+	top:-20px;  /*調整次選單位置蓋住主選單*/
+	display: none; /*次選單預設不顯示*/
+	
 }
 #lf
 {
