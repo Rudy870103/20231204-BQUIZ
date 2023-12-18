@@ -17,7 +17,7 @@
     </div>
 </div>
 	<div id="main">
-	<?php 
+		<?php 
 			$title=$Title->find(['sh'=>1]);
 		?>
     	<a title="<?=$title['text'];?>" href="index.php">
@@ -32,45 +32,57 @@
                     	<span class="t">進站總人數 : <?=$Total->find(1)['total'];?></span>
                     </div>
         		</div>
-				<!-- 中間內容區 -->
-				<?php
-				
-				$do=$_GET['do']??'main';
-				$file="./front/{$do}.php";
-				if(file_exists($file)){
-					include $file;
-				}else{
-					include "./front/main.php";
-				}
-			
-				?>
 
+				<?php 
 
+					$do=$_GET['do']??'main';
+					$file="./front/{$do}.php";
+					if(file_exists($file)){
+						include $file;
+					}else{
+						include "./front/main.php";	
+					}
 
-				<!-- 中間內容區end -->
-        
-                                 <div class="di di ad" style="height:540px; width:23%; padding:0px; margin-left:22px; float:left; ">
+					?>
+
+                    <div class="di di ad" style="height:540px; width:23%; padding:0px; margin-left:22px; float:left; ">
                 	<!--右邊-->   
                 	<button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;" onclick="lo(&#39;?do=login&#39;)">管理登入</button>
                 	<div style="width:89%; height:480px;" class="dbor">
                     	<span class="t botli">校園映象區</span>
-						                        <script>
-                        	var nowpage=0,num=0;
+					<?php
+					$imgs=$Image->all(['sh'=>1]);
+
+					foreach($imgs as $idx => $img){
+					?>
+						<div id="ssaa<?=$idx;?>" class='im'>
+							<img src="./img/<?=$img['img'];?>" style="width:150px;height:103px">
+						</div>
+					<?php
+					}
+					?>
+						<script>
+                        	var nowpage=1,num=0;
 							function pp(x)
 							{
 								var s,t;
-								if(x==1&&nowpage-1>=0)
+								if(x==1 && nowpage-1>=0)
 								{nowpage--;}
 								if(x==2&&(nowpage+1)*3<=num*1+3)
 								{nowpage++;}
+								
+
 								$(".im").hide()
 								for(s=0;s<=2;s++)
 								{
 									t=s*1+nowpage*1;
 									$("#ssaa"+t).show()
-								}
+
+	 							}
 							}
-							pp(1)
+
+
+							pp(2)
                         </script>
                     </div>
                 </div>
